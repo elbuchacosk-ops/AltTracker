@@ -55,6 +55,10 @@ Notes
     Edit Data.lua while WoW is closed, or use /alts reload after editing
 
     Character names are case-insensitive
+<img width="207" height="11" alt="image" src="https://github.com/user-attachments/assets/aaf4e9ef-244d-41b2-b648-625ace71a9dd" />
+<img width="286" height="24" alt="image" src="https://github.com/user-attachments/assets/5d901694-0848-4bf4-8782-ad260095f4e8" />
+
+
 
 Credits
 
