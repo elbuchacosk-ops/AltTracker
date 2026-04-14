@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: AltTracker
+## Notes: Renames alts to show main character name
+## Author: YourName
+## Version: 1.4
+
+Data.lua
+Core.lua
