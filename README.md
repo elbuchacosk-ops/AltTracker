@@ -56,7 +56,8 @@ Notes
 
     Character names are case-insensitive
 <img width="828" height="44" alt="image" src="https://github.com/user-attachments/assets/aaf4e9ef-244d-41b2-b648-625ace71a9dd" />
-<img width="1184" height="96" alt="image" src="https://github.com/user-attachments/assets/5d901694-0848-4bf4-8782-ad260095f4e8" />
+<img width="1186" height="84" alt="image" src="https://github.com/user-attachments/assets/da41d775-2154-49a5-8ac4-63847ed5e8cf" />
+
 
 
 
