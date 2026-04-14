@@ -1,5 +1,5 @@
 ## License
-Do whatever you want with this. No attribution requir
+Do whatever you want with this. No attribution required.
 
 # AltTracker
 A World of Warcraft 3.3.5a (WotLK) addon that shows main character names for alts and highlights banned players in chat and unit frames.
