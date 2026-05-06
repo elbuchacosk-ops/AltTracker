@@ -1,7 +1,7 @@
 -- Edit this file to add your main/alt relationships
 -- Format: ["MainName"] = {"Alt1", "Alt2", "Alt3"}
 
-AltTracker_Data = {
+CharTracker_Data = {
     ["Thats Me Actually"] = {"Testerchar"},
     -- Add more as needed:
     -- ["YourMain"] = {"Alt1", "Alt2"},

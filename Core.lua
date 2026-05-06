@@ -1,4 +1,4 @@
-local addonName = "AltTracker"
+local addonName = "CharTracker"
 local frame = CreateFrame("Frame")
 
 -- Store reverse lookup (alt -> main)
@@ -10,8 +10,8 @@ local function BuildLookupTable()
     wipe(altToMain)
     wipe(banList)
     
-    if AltTracker_Data then
-        for mainName, alts in pairs(AltTracker_Data) do
+    if CharTracker_Data then
+        for mainName, alts in pairs(CharTracker_Data) do
             for _, alt in ipairs(alts) do
                 if alt and alt ~= "" then
                     altToMain[strupper(alt)] = mainName
@@ -195,7 +195,7 @@ local function OnEvent(self, event, ...)
         UpdatePartyFrames()
         UpdateRaidFrames()
         UpdateTargetFrame()
-        print("|cff00ff00AltTracker loaded!|r")
+        print("|cff00ff00CharTracker loaded!|r")
         print("|cffffaa00[Main] will appear at the start of messages|r")
         print("|cffff0000[Reason] will appear for banned players|r")
         print("|cff88aaffExample: [Elbu] Holytext: Hello|r")
@@ -222,23 +222,23 @@ frame:RegisterEvent("PLAYER_TARGET_CHANGED")
 frame:SetScript("OnEvent", OnEvent)
 
 -- SLASH COMMANDS
-function AltTracker_ShowHelp()
-    print("|cff00ff00AltTracker Commands:|r")
-    print("  |cffffaa00/alts|r - Show this help")
-    print("  |cffffaa00/alts list|r - Show all configured mains/alts")
-    print("  |cffffaa00/alts bans|r - Show ban list")
-    print("  |cffffaa00/alts reload|r - Reload configuration")
-    print("  |cffffaa00/alts test|r - Test function")
+function CharTracker_ShowHelp()
+    print("|cff00ff00CharTracker Commands:|r")
+    print("  |cffffaa00/chars|r - Show this help")
+    print("  |cffffaa00/chars list|r - Show all configured mains/alts")
+    print("  |cffffaa00/chars bans|r - Show ban list")
+    print("  |cffffaa00/chars reload|r - Reload configuration")
+    print("  |cffffaa00/chars test|r - Test function")
 end
 
-function AltTracker_List()
-    if not AltTracker_Data or next(AltTracker_Data) == nil then
+function CharTracker_List()
+    if not CharTracker_Data or next(CharTracker_Data) == nil then
         print("|cffff0000No aliases configured!|r")
         return
     end
     
-    print("|cff00ff00=== AltTracker Configuration ===|r")
-    for mainName, alts in pairs(AltTracker_Data) do
+    print("|cff00ff00=== CharTracker Configuration ===|r")
+    for mainName, alts in pairs(CharTracker_Data) do
         if alts and #alts > 0 then
             local altList = table.concat(alts, ", ")
             print(string.format("|cffffaa00%s|r -> {|cff88aaff%s|r}", mainName, altList))
@@ -246,7 +246,7 @@ function AltTracker_List()
     end
 end
 
-function AltTracker_BanList()
+function CharTracker_BanList()
     if not BanList_Data or next(BanList_Data) == nil then
         print("|cffff0000No banned players configured!|r")
         return
@@ -261,17 +261,17 @@ function AltTracker_BanList()
     end
 end
 
-function AltTracker_Reload()
+function CharTracker_Reload()
     BuildLookupTable()
     UpdatePartyFrames()
     UpdateRaidFrames()
     UpdateTargetFrame()
     UpdateHealBot()
-    print("|cff00ff00AltTracker: Reloaded!|r")
+    print("|cff00ff00CharTracker: Reloaded!|r")
 end
 
-function AltTracker_Test()
-    print("|cff00ff00AltTracker Test:|r")
+function CharTracker_Test()
+    print("|cff00ff00CharTracker Test:|r")
     print("  Holytext main: " .. tostring(GetMainName("Holytext")))
     print("  Dawil main: " .. tostring(GetMainName("Dawil")))
     print("  Nalthal main: " .. tostring(GetMainName("Nalthal")))
@@ -279,20 +279,20 @@ function AltTracker_Test()
     print("  Mellissaa ban: " .. tostring(GetBanReason("Mellissaa")))
 end
 
-SLASH_ALTTRACKER1 = "/alts"
-SLASH_ALTTRACKER2 = "/altracker"
-SlashCmdList["ALTTRACKER"] = function(msg)
+SLASH_CHARTRACKER1 = "/chars"
+SLASH_CHARTRACKER2 = "/chartracker"
+SlashCmdList["CHARTRACKER"] = function(msg)
     if not msg or msg == "" then
-        AltTracker_ShowHelp()
+        CharTracker_ShowHelp()
     elseif msg == "list" then
-        AltTracker_List()
+        CharTracker_List()
     elseif msg == "bans" then
-        AltTracker_BanList()
+        CharTracker_BanList()
     elseif msg == "reload" then
-        AltTracker_Reload()
+        CharTracker_Reload()
     elseif msg == "test" then
-        AltTracker_Test()
+        CharTracker_Test()
     else
-        AltTracker_ShowHelp()
+        CharTracker_ShowHelp()
     end
 end

@@ -1,12 +1,12 @@
 ## License
 Do whatever you want with this. No attribution required.
 
-# AltTracker
+# CharTracker
 A World of Warcraft 3.3.5a (WotLK) addon that shows main character names for alts and highlights banned players in chat and unit frames.
 
 ## What It Does
 
-- **Chat Messages**: Adds `[MainName]` before messages from known alts
+- **Chat Messages**: Adds `[MainName]` before messages from known chars (alts)
 - **Banned Players**: Marks banned players with `[Reason]` in red
 - **Unit Frames**: Shows main names in party, raid, and target frames
 - **HealBot Support**: Works with HealBot unit frames
@@ -33,14 +33,14 @@ BanList_Data = {
 }
 
 Commands
-/alts -	Show help
-/alts list -	Display all main/alt relationships
-/alts bans -	Display ban list
-/alts reload -	Reload configuration after editing Data.lua
-/alts test -	Test if data loaded correctly
+/chars -	Show help
+/chars list -	Display all main/alt relationships
+/chars bans -	Display ban list
+/chars reload -	Reload configuration after editing Data.lua
+/chars test -	Test if data loaded correctly
 Files
 
-    AltTracker.toc - Addon metadata
+    CharTracker.toc - Addon metadata
 
     Core.lua - Main addon code
 
@@ -52,7 +52,7 @@ Requirements
 
 Notes
 
-    Edit Data.lua while WoW is closed, or use /alts reload after editing
+    Edit Data.lua while WoW is closed, or use /chars reload after editing
 
     Character names are case-insensitive
 <img width="828" height="44" alt="image" src="https://github.com/user-attachments/assets/aaf4e9ef-244d-41b2-b648-625ace71a9dd" />
