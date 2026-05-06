@@ -8,8 +8,8 @@ A World of Warcraft 3.3.5a (WotLK) addon that shows main character names for alt
 
 - **Chat Messages**: Adds `[MainName]` before messages from known chars (alts)
 - **Banned Players**: Marks banned players with `[Reason]` in red
-- **Unit Frames**: Shows main names in party, raid, and target frames
-- **HealBot Support**: Works with HealBot unit frames
+- **Unit Frames**: Shows main names in party, (not raid frames), and target frames
+- **HealBot Support**: CURRENTLY DOESNT WORK Works with HealBot unit frames
 
 ## Installation
 
